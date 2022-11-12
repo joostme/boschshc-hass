@@ -1,6 +1,7 @@
 """Platform for cover integration."""
-from boschshcpy import SHCSession, SHCShutterControl
 
+from .models_impl import SHCShutterControl
+from .session import SHCSession
 from homeassistant.components.cover import (
     ATTR_POSITION,
     SUPPORT_CLOSE,

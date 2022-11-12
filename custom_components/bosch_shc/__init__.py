@@ -1,9 +1,11 @@
 """The Bosch Smart Home Controller integration."""
 import logging
+from .exceptions import SHCAuthenticationError, SHCConnectionError
+
+from .models_impl import SHCUniversalSwitch
+from .session import SHCSession
 
 import voluptuous as vol
-from boschshcpy import SHCSession, SHCUniversalSwitch
-from boschshcpy.exceptions import SHCAuthenticationError, SHCConnectionError
 from homeassistant.components.zeroconf import async_get_instance
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (

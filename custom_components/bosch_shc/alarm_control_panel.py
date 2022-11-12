@@ -1,7 +1,8 @@
 """Platform for alarm control panel integration."""
 import logging
+from .domain_impl import SHCIntrusionSystem
+from .session import SHCSession
 
-from boschshcpy import SHCIntrusionSystem, SHCSession
 from homeassistant.components.alarm_control_panel import AlarmControlPanelEntity
 from homeassistant.components.alarm_control_panel.const import (
     SUPPORT_ALARM_ARM_AWAY,

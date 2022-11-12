@@ -1,6 +1,6 @@
 
 {
-    "name": "Bosch Smart Home Controller (SHC) integration",
+    "name": "Bosch Smart Home Controller (SHC) integration - BETA",
     "domains": [
         "alarm_control_panel",
         "binary_sensor",

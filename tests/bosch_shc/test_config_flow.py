@@ -1,17 +1,12 @@
 """Test the Bosch SHC config flow."""
 from unittest.mock import PropertyMock, mock_open, patch
+from custom_components.bosch_shc.config_flow import write_tls_asset
 
-from boschshcpy.exceptions import (
-    SHCAuthenticationError,
-    SHCConnectionError,
-    SHCRegistrationError,
-    SHCSessionError,
-)
-from boschshcpy.information import SHCInformation
+from custom_components.bosch_shc.const import CONF_SHC_CERT, CONF_SHC_KEY, DOMAIN
+from .exceptions import SHCAuthenticationError, SHCConnectionError, SHCRegistrationError, SHCSessionError
+from .information import SHCInformation
 
 from homeassistant import config_entries, setup
-from homeassistant.components.bosch_shc.config_flow import write_tls_asset
-from homeassistant.components.bosch_shc.const import CONF_SHC_CERT, CONF_SHC_KEY, DOMAIN
 
 from tests.common import MockConfigEntry
 

@@ -1,8 +1,9 @@
 """Provides device triggers for Bosch Smart Home Controller integration."""
 from typing import List, Tuple
+from .device import SHCDevice
+from .session import SHCSession
 
 import voluptuous as vol
-from boschshcpy import SHCDevice, SHCSession
 from homeassistant.components.automation import AutomationActionType
 from homeassistant.components.device_automation import DEVICE_TRIGGER_BASE_SCHEMA
 from homeassistant.components.device_automation.exceptions import (

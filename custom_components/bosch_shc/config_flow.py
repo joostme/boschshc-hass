@@ -1,15 +1,11 @@
 """Config flow for Bosch Smart Home Controller integration."""
 import logging
 from os import makedirs
+from .exceptions import SHCAuthenticationError, SHCConnectionError, SHCRegistrationError, SHCSessionError
+from .register_client import SHCRegisterClient
+from .session import SHCSession
 
 import voluptuous as vol
-from boschshcpy import SHCRegisterClient, SHCSession
-from boschshcpy.exceptions import (
-    SHCAuthenticationError,
-    SHCConnectionError,
-    SHCRegistrationError,
-    SHCSessionError,
-)
 from homeassistant import config_entries, core
 from homeassistant.components import zeroconf
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_TOKEN

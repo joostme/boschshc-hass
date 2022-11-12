@@ -1,7 +1,8 @@
 """Platform for climate integration."""
 import logging
+from .models_impl import SHCClimateControl
+from .session import SHCSession
 
-from boschshcpy import SHCClimateControl, SHCSession
 from homeassistant.components.climate import ClimateEntity
 from homeassistant.components.climate.const import (
     ATTR_HVAC_MODE,

@@ -2,18 +2,13 @@
 import asyncio
 import logging
 from datetime import datetime, timedelta
+from .device import SHCDevice
+from .models_impl import SHCBatteryDevice, SHCShutterContact, SHCSmokeDetectionSystem, SHCSmokeDetector, SHCWaterLeakageSensor
+from .session import SHCSession
 
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
-from boschshcpy import (
-    SHCBatteryDevice,
-    SHCDevice,
-    SHCSession,
-    SHCShutterContact,
-    SHCSmokeDetectionSystem,
-    SHCSmokeDetector,
-    SHCWaterLeakageSensor,
-)
+
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,
     BinarySensorEntity,

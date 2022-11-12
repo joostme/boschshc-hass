@@ -1,7 +1,7 @@
 """Platform for light integration."""
 import logging
+from .session import SHCSession
 
-from boschshcpy import SHCSession
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
     ATTR_COLOR_TEMP,

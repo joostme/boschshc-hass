@@ -1,8 +1,7 @@
 """Platform for sensor integration."""
 from __future__ import annotations
-
-from boschshcpy import SHCSession
-from boschshcpy.device import SHCDevice
+from .device import SHCDevice
+from .session import SHCSession
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,

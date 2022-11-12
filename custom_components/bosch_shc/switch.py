@@ -2,16 +2,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-
-from boschshcpy import (
-    SHCCamera360,
-    SHCCameraEyes,
-    SHCLightSwitch,
-    SHCSession,
-    SHCSmartPlug,
-    SHCSmartPlugCompact,
-)
-from boschshcpy.device import SHCDevice
+from .device import SHCDevice
+from .models_impl import SHCCamera360, SHCCameraEyes, SHCLightSwitch, SHCSmartPlug, SHCSmartPlugCompact
+from .session import SHCSession
 
 from homeassistant.components.switch import (
     SwitchDeviceClass,
